@@ -29,13 +29,19 @@
                                         <rect key="frame" x="135.5" y="50" width="104.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="6LW-ee-HUF"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weight In KG" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bvN-0z-8ps">
                                         <rect key="frame" x="135.5" y="105" width="104.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Fi0-TP-uU7"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SxU-2I-qXV">
                                         <rect key="frame" x="41" y="110" width="54" height="21"/>
@@ -56,7 +62,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.92929413107277514" blue="0.57158431997785675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.82358344052571131" blue="0.57442889407420994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="B0z-VO-XOa" firstAttribute="bottom" secondItem="bvN-0z-8ps" secondAttribute="bottom" id="5jS-CK-pCV"/>
                                     <constraint firstItem="bvN-0z-8ps" firstAttribute="top" secondItem="bWW-Ix-VD8" secondAttribute="bottom" constant="25" id="6Kx-Ad-qgT"/>
@@ -96,6 +102,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="bmiLabel" destination="B0z-VO-XOa" id="bIR-ck-9Dp"/>
+                        <outlet property="heightTxtField" destination="bWW-Ix-VD8" id="Qmw-0Z-FKg"/>
+                        <outlet property="weightTxtField" destination="bvN-0z-8ps" id="roB-zN-SFY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
