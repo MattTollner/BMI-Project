@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A238m" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,12 +20,36 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjW-rc-ofd">
-                                <rect key="frame" x="0.0" y="94" width="320" height="474"/>
+                                <rect key="frame" x="0.0" y="257.5" width="1024" height="510.5"/>
                                 <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="scale" translatesAutoresizingMaskIntoConstraints="NO" id="cjB-5L-3BP">
+                                        <rect key="frame" x="54" y="205" width="115.5" height="102"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cjB-5L-3BP" secondAttribute="height" multiplier="213:188" id="rbo-TA-zuM"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="tape" translatesAutoresizingMaskIntoConstraints="NO" id="vpP-Q1-jS7">
+                                        <rect key="frame" x="54" y="51.5" width="115.5" height="103.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vpP-Q1-jS7" secondAttribute="height" multiplier="71:63" id="Fa9-Fk-Iyd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="I5b-Ep-x29">
+                                        <rect key="frame" x="54" y="357" width="115.5" height="108.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="I5b-Ep-x29" secondAttribute="height" multiplier="213:200" id="kh2-jr-wSq"/>
+                                        </constraints>
+                                    </imageView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhK-kl-fTb">
+                                        <rect key="frame" x="242.5" y="51.5" width="773.5" height="103.5"/>
+                                    </pickerView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bfR-PB-ZVD">
+                                        <rect key="frame" x="242.5" y="148" width="773.5" height="216"/>
+                                    </pickerView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height in M" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWW-Ix-VD8">
                                         <rect key="frame" x="108" y="50" width="104.5" height="30"/>
                                         <nil key="textColor"/>
@@ -49,8 +74,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0z-VO-XOa">
-                                        <rect key="frame" x="258.5" y="50" width="35" height="85"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0z-VO-XOa">
+                                        <rect key="frame" x="642" y="356" width="35" height="85"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -66,21 +91,67 @@
                                 <constraints>
                                     <constraint firstItem="B0z-VO-XOa" firstAttribute="bottom" secondItem="bvN-0z-8ps" secondAttribute="bottom" id="5jS-CK-pCV"/>
                                     <constraint firstItem="bvN-0z-8ps" firstAttribute="top" secondItem="bWW-Ix-VD8" secondAttribute="bottom" constant="25" id="6Kx-Ad-qgT"/>
+                                    <constraint firstItem="vpP-Q1-jS7" firstAttribute="centerX" secondItem="cjB-5L-3BP" secondAttribute="centerX" id="A4b-s3-hKa"/>
+                                    <constraint firstItem="I5b-Ep-x29" firstAttribute="centerX" secondItem="cjB-5L-3BP" secondAttribute="centerX" id="AQo-x0-oo4"/>
+                                    <constraint firstItem="cjB-5L-3BP" firstAttribute="leading" secondItem="fjW-rc-ofd" secondAttribute="leading" constant="54" id="ATK-uo-vGl"/>
                                     <constraint firstItem="bWW-Ix-VD8" firstAttribute="leading" secondItem="neF-Xb-DA0" secondAttribute="trailing" constant="40.5" id="FyO-z5-qTz"/>
                                     <constraint firstItem="bWW-Ix-VD8" firstAttribute="centerX" secondItem="fjW-rc-ofd" secondAttribute="centerX" id="J0V-eU-7nB"/>
+                                    <constraint firstItem="lhK-kl-fTb" firstAttribute="centerX" secondItem="bfR-PB-ZVD" secondAttribute="centerX" id="L1v-cy-qF6"/>
+                                    <constraint firstItem="lhK-kl-fTb" firstAttribute="centerY" secondItem="vpP-Q1-jS7" secondAttribute="centerY" id="LyO-Kd-Wmw"/>
+                                    <constraint firstItem="lhK-kl-fTb" firstAttribute="width" secondItem="bfR-PB-ZVD" secondAttribute="width" id="PJm-gC-O4u"/>
                                     <constraint firstItem="B0z-VO-XOa" firstAttribute="leading" secondItem="bWW-Ix-VD8" secondAttribute="trailing" constant="46" id="QMZ-cM-Jb4"/>
                                     <constraint firstItem="B0z-VO-XOa" firstAttribute="top" secondItem="bWW-Ix-VD8" secondAttribute="top" id="Qy2-fw-aiF"/>
                                     <constraint firstItem="SxU-2I-qXV" firstAttribute="centerY" secondItem="bvN-0z-8ps" secondAttribute="centerY" id="TUK-Bd-eFs"/>
+                                    <constraint firstItem="vpP-Q1-jS7" firstAttribute="width" secondItem="cjB-5L-3BP" secondAttribute="width" id="WEy-PL-vc3"/>
+                                    <constraint firstItem="I5b-Ep-x29" firstAttribute="top" secondItem="cjB-5L-3BP" secondAttribute="bottom" constant="50" id="WNh-Vp-dlq"/>
+                                    <constraint firstItem="bfR-PB-ZVD" firstAttribute="centerY" secondItem="cjB-5L-3BP" secondAttribute="centerY" id="czX-x5-2BC"/>
+                                    <constraint firstItem="cjB-5L-3BP" firstAttribute="top" secondItem="vpP-Q1-jS7" secondAttribute="bottom" constant="50" id="d4c-9W-ZHf"/>
+                                    <constraint firstItem="lhK-kl-fTb" firstAttribute="height" secondItem="vpP-Q1-jS7" secondAttribute="height" id="dVl-XH-hyf"/>
+                                    <constraint firstItem="bfR-PB-ZVD" firstAttribute="leading" secondItem="cjB-5L-3BP" secondAttribute="trailing" constant="73" id="hmc-u0-IbX"/>
                                     <constraint firstItem="bvN-0z-8ps" firstAttribute="width" secondItem="bWW-Ix-VD8" secondAttribute="width" id="iDg-hU-zdk"/>
                                     <constraint firstItem="bvN-0z-8ps" firstAttribute="centerX" secondItem="bWW-Ix-VD8" secondAttribute="centerX" id="iTA-SU-fLv"/>
                                     <constraint firstItem="bWW-Ix-VD8" firstAttribute="top" secondItem="fjW-rc-ofd" secondAttribute="top" constant="50" id="jmv-ea-BHv"/>
                                     <constraint firstItem="SxU-2I-qXV" firstAttribute="top" secondItem="neF-Xb-DA0" secondAttribute="bottom" constant="34" id="k8g-KU-fuJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bfR-PB-ZVD" secondAttribute="trailing" constant="8" id="kbt-bK-Bfj"/>
+                                    <constraint firstItem="cjB-5L-3BP" firstAttribute="height" secondItem="fjW-rc-ofd" secondAttribute="height" multiplier="0.2" id="nTP-kD-dNh"/>
+                                    <constraint firstItem="I5b-Ep-x29" firstAttribute="width" secondItem="cjB-5L-3BP" secondAttribute="width" id="qJ2-pA-t2L"/>
                                     <constraint firstItem="neF-Xb-DA0" firstAttribute="centerY" secondItem="bWW-Ix-VD8" secondAttribute="centerY" id="xMw-Mn-F84"/>
                                     <constraint firstItem="bvN-0z-8ps" firstAttribute="leading" secondItem="SxU-2I-qXV" secondAttribute="trailing" constant="40.5" id="xdT-KI-56g"/>
+                                    <constraint firstItem="cjB-5L-3BP" firstAttribute="centerY" secondItem="fjW-rc-ofd" secondAttribute="centerY" id="yz3-gY-MFC"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="cjB-5L-3BP"/>
+                                        <exclude reference="vpP-Q1-jS7"/>
+                                        <exclude reference="I5b-Ep-x29"/>
+                                        <exclude reference="lhK-kl-fTb"/>
+                                        <exclude reference="bfR-PB-ZVD"/>
+                                        <exclude reference="bWW-Ix-VD8"/>
+                                        <exclude reference="bvN-0z-8ps"/>
+                                        <exclude reference="SxU-2I-qXV"/>
+                                        <exclude reference="neF-Xb-DA0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="bWW-Ix-VD8"/>
+                                        <include reference="bvN-0z-8ps"/>
+                                        <include reference="SxU-2I-qXV"/>
+                                        <include reference="neF-Xb-DA0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="cjB-5L-3BP"/>
+                                        <include reference="vpP-Q1-jS7"/>
+                                        <include reference="I5b-Ep-x29"/>
+                                        <include reference="lhK-kl-fTb"/>
+                                        <include reference="bfR-PB-ZVD"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="Kfn-Qs-xmR">
-                                <rect key="frame" x="0.0" y="20" width="320" height="74"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="237.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Kfn-Qs-xmR" secondAttribute="height" multiplier="125:29" id="qZi-Cy-wLl"/>
                                 </constraints>
@@ -96,11 +167,6 @@
                             <constraint firstAttribute="trailing" secondItem="Kfn-Qs-xmR" secondAttribute="trailing" id="gRr-d5-Sfg"/>
                             <constraint firstItem="fjW-rc-ofd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zbO-7q-Noe"/>
                         </constraints>
-                        <variation key="heightClass=regular-widthClass=regular">
-                            <mask key="subviews">
-                                <include reference="Kfn-Qs-xmR"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="bmiLabel" destination="B0z-VO-XOa" id="bIR-ck-9Dp"/>
@@ -110,10 +176,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="135.38230884557723"/>
+            <point key="canvasLocation" x="131.8359375" y="135.15625"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Banner" width="356" height="84"/>
+        <image name="Banner" width="676" height="169"/>
+        <image name="heart" width="213" height="200"/>
+        <image name="scale" width="213" height="188"/>
+        <image name="tape" width="213" height="189"/>
     </resources>
 </document>
