@@ -9,14 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
-
-    class func doDiv100(u: Int) -> Double{
-        return Double(u) * 0.01
-    }
-    
-    class func doDiv2(u: Int) -> Double{
-        return Double(u) * 0.5
-    }
+   
     
     var weight : Double?
     var height : Double?
@@ -31,9 +24,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         }
     }
     
-    //Picker values
-    let listOfHeightsInM = Array(140...220).map(ViewController.doDiv100)
-    let listOfWeightInKG = Array(80...240).map(ViewController.doDiv2)
+    //Picker values                             -- Closure
+    let listOfHeightsInM = Array(140...220).map({Double ($0) * 0.01})
+    let listOfWeightInKG = Array(80...240).map({Double ($0) * 0.01})
     
     @IBOutlet weak var bmiLabel: UILabel!
     @IBOutlet weak var heightTxtField: UITextField!
@@ -68,7 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         //If nill it will fail and return
-        guard let txt  : String = textField.text else {
+        guard let txt = textField.text else {
             return
         }
         
@@ -80,7 +73,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             
         }
         
+     
         
+        //Which textField is being editied
         switch (textField) {
             
         case heightTxtField:
